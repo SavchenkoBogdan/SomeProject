@@ -76,24 +76,7 @@ namespace WindowsFormsApplication1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Image Files (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.Multiselect = true;
-            var userClickedOK = openFileDialog1.ShowDialog();
-            if (userClickedOK == DialogResult.OK)
-            {
-                fileName = openFileDialog1.FileName;
-                DrawSomething();
-                System.IO.Stream fileStream = openFileDialog1.OpenFile();
-
-                using (System.IO.StreamReader reader = new System.IO.StreamReader(fileStream))
-                {
-                    // Read the first line from the file and write it the textbox.
-                    //tbResults.Text = reader.ReadLine();
-                }
-                fileStream.Close();
-            }
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
